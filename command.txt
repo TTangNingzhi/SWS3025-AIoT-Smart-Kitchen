@@ -1,0 +1,13 @@
+
+PC:
+
+set FLASK_APP=main.py
+python -m flask run --host=0.0.0.0
+
+
+
+
+Raspberry Pi:
+
+python3 raspi_up.py
+python3 raspi_down.py

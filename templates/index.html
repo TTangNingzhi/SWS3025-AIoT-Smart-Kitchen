@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<title>Cloud Server</title>
+	</head>
+	<body>
+		<center>
+		<h1>Smart Kitchen</h1>
+		<section>
+			<h2>Environmental Parameters</h2>
+			<table cellspacing="1" cellpadding="3" border="1" style="text-align:center">
+			<tr>
+				<th>Parameter</th>
+				<th>Data</th>
+			</tr>
+			<tr>
+				<td>Temperature</td>
+				<td>{{t}}</td>
+			</tr>
+			<tr>
+				<td>Pressure</td>
+				<td>{{p}}</td>
+			</tr>
+			<tr>
+				<td>Humidity</td>
+				<td>{{h}}</td>
+			</tr>
+			</tr>
+			<tr>
+				<td>Smoke</td>
+				<td>{{s}}</td>
+			</tr>
+			<tr>
+				<td>Flame</td>
+				<td>{{f}}</td>
+			</tr>
+			<tr>
+				<td>Assessment</td>
+				<td>{{a}}</td>
+			</tr>
+			</table>
+		</section>
+		<br/>
+		<section>
+			<h2>Control Options</h2>
+			<p>
+				<h3>Manual Mode</h3>
+				LED: <a href="/ledon">ON</a> | <a href="/ledoff">OFF</a>
+				Buzzer: <a href="/bzon">ON</a> | <a href="/bzoff">OFF</a>
+				
+				Fan: <a href="/fanon">ON</a> | <a href="/fanoff">OFF</a>
+				Water Pump: <a href="/pumpon">ON</a> | <a href="/pumpoff">OFF</a>
+			<p>
+			</p>
+				<a href="/get">GET</a> Real Time Information
+			</p>
+			<p>
+				<h3>Detect Mode</h3>
+				<a href="/detect">START</a>
+				| <a href="/end">END</a>
+			</p>
+		</section>
+		</center>
+	</body>
+</html>
+
