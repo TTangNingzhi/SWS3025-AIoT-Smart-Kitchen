@@ -2,10 +2,12 @@ input.onButtonPressed(Button.A, function () {
     basic.showString(message)
     basic.showIcon(IconNames.Yes)
 })
+
 serial.onDataReceived(serial.delimiters(Delimiters.NewLine), function () {
     cmd = serial.readLine()
     radio.sendString(cmd)
 })
+
 function init () {
     temperature = -1
     pressure = -1
@@ -13,12 +15,14 @@ function init () {
     smoke = -1
     flame = -1
 }
+
 radio.onReceivedString(function (receivedString) {
     if (receivedString == "start") {
         basic.showString("R")
         init()
     }
 })
+
 radio.onReceivedValue(function (name, value) {
     if (name == "temp") {
         temperature = value
@@ -33,6 +37,7 @@ radio.onReceivedValue(function (name, value) {
         end = true
     }
 })
+
 let index = 0
 let end = false
 let flame = 0
@@ -43,6 +48,7 @@ let temperature = 0
 let message = ""
 let cmd = ""
 init()
+
 radio.setGroup(8)
 radio.setTransmitSerialNumber(true)
 radio.setTransmitPower(7)

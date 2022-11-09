@@ -7,3 +7,5 @@ Developed in NUS Summer Workshop SWS3025: Artificial Intelligence and Internet o
 
 **Contact us:** 11912521@mail.sustech.edu.cn (Tang Ningzhi)
   cesarchen616@outlook.com (Chen Zihan)
+
+How to get a safer and cozier kitchen by using AIoT

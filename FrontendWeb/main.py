@@ -6,10 +6,8 @@ from mqtt_back import on_connect, on_message, send_command, predict, info, clien
 from flask import Flask
 from flask import request, session, redirect, url_for, render_template
 
-
 app = Flask(__name__)
 app.secret_key = 'qwerty1234567890'
-
 
 @app.route('/', methods=['GET'])
 def index():

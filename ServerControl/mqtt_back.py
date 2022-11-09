@@ -50,7 +50,6 @@ def predict(data):
     return cmd
     
 try:
-
     info = [0, 0, 0, 0, 0, 'None']
     
     scl = load('scalar.joblib')

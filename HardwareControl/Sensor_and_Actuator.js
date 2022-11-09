@@ -1,6 +1,7 @@
 input.onButtonPressed(Button.A, function () {
     sendValue()
 })
+
 function init () {
     temperature = -1
     pressure = -1
@@ -8,6 +9,7 @@ function init () {
     smoke = -1
     flame = -1
 }
+
 radio.onReceivedString(function (receivedString) {
     if (receivedString == "ledon") {
         pins.digitalWritePin(DigitalPin.P8, 1)
@@ -33,11 +35,13 @@ radio.onReceivedString(function (receivedString) {
         detect = false
     }
 })
+
 input.onButtonPressed(Button.B, function () {
     message = "Data:" + "T:" + temperature + ";P:" + pressure + ";H:" + humidity + ";S:" + smoke + ";F:" + flame
     basic.showString(message)
     basic.showIcon(IconNames.Yes)
 })
+
 function sendValue () {
     basic.showIcon(IconNames.Diamond)
     init()
@@ -55,8 +59,10 @@ function sendValue () {
     radio.sendValue("flame", flame)
     basic.showIcon(IconNames.Happy)
     pause(1000)
+
 basic.showIcon(IconNames.Yes)
 }
+
 let message = ""
 let detect = false
 let flame = 0
@@ -65,6 +71,7 @@ let humidity = 0
 let pressure = 0
 let temperature = 0
 init()
+
 BMP280.Address(BMP280_I2C_ADDRESS.ADDR_0x76)
 dht11.set_pin(DigitalPin.P1)
 radio.setGroup(8)
