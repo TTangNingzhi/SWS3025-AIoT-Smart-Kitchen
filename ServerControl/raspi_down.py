@@ -20,7 +20,6 @@ def sendCommand(command):
     ser.write(str.encode(command))
     
 try:
-    
     broker = 'broker.emqx.io'
     port = 1883
     topic = '/sws3025/command'
@@ -36,7 +35,6 @@ try:
 #    client.loop_forever()
 
 except KeyboardInterrupt:
-    
     if ser.is_open:
         ser.close()
     print('Program terminated!')
